@@ -15,30 +15,10 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="styles/jquery.contextMenu.css" type="text/css" media="screen">
 <link rel="stylesheet" href="styles/style01.css" type="text/css" media="screen">
- <script>              pppp
-function tst()
-{
- var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() 
-      {
-      if (this.readyState == 4 && this.status == 200) 
-      {
-        //alert(this.responseText);
-        document.getElementById("container").innerHTML   = this.responseText;
-//alert( document.getElementById("container").innerHTML);
-      }
-     
-     };
-     xhttp.open("GET",'/gettable/1',true);
-     xhttp.send();
-
-
-}
-
+ <script>  
 $( document ).ready(function() {
 	//alert(Response.GetDataFromUrl('/gettable/1'));
-    Response.GetDataFromUrl('/gettable/1',document.getElementById("container"));
-//$('#container').load('/gettable/1');
+  $('#container').load('/gettable/1');
 
 });
  </script>
@@ -48,7 +28,7 @@ $( document ).ready(function() {
 
 <ul class="topnav" id="myTopnav">
   <li><a class="active" href="#home">Akce</a></li>
-  <li><a href="#news">Nastavení</a></li>
+  <li><a href="#news">NastavenÃ­</a></li>
    <li><a href="javascript:void(0);" onclick="tst();">O aplikaci</a></li>
   <li class="icon">
     <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">?</a>
