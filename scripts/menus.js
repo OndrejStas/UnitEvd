@@ -11,7 +11,7 @@ dialog = $( "#dialog-form" );
 		if (key=='edit')  dialog.dialog( "open" );
             },
             items: {
-                "edit": {name: "Otevøi", icon: "edit"}
+                "edit": {name: "OtevÅ™i", icon: "edit"}
                 }
            
         });
@@ -29,6 +29,20 @@ dialog = $( "#dialog-form" );
 
     });
     
+    function dropFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+ function DropDown0() {
+        document.getElementById("myDropdown0").classList.toggle("show");
+    }
+
+
+
+function UnitDetail(inp)
+{
+    $('#container').load('/detail/1');
+}
     
     function myFunction() {
     var x = document.getElementById("myTopnav");

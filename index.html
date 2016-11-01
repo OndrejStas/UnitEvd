@@ -15,25 +15,64 @@
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="styles/jquery.contextMenu.css" type="text/css" media="screen">
 <link rel="stylesheet" href="styles/style01.css" type="text/css" media="screen">
+<link rel="stylesheet" href="styles/menu.css" type="text/css" media="screen">
  <script>  
 $( document ).ready(function() {
 	//alert(Response.GetDataFromUrl('/gettable/1'));
-  $('#container').load('/gettable/1');
+loader(1); 
+ $('#container').load('/gettable/1');
+loader(0);
 
 });
+
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function loader(inp)
+{
+    if(inp)  $('#loader').show();
+    if(!inp) $('#loader').hide();
+}
+
  </script>
+
+
+
 
 </head>
 <body>
 
-<ul class="topnav" id="myTopnav">
-  <li><a class="active" href="#home">Akce</a></li>
+
+<ul>
+  <li class="dropdown" >
+    <a href="#home" class="dropbtn" onclick="DropDown0()">Akce</a>
+   <div class="dropdown-content" id="myDropdown0">
+      <a href="#">Nová jednotka (Unit)</a>
+      <a href="#">Nový předmět</a>
+      <a href="#">Filtr jednotek</a>
+  </li>
   <li><a href="#news">Nastavení</a></li>
-   <li><a href="javascript:void(0);" onclick="tst();">O aplikaci</a></li>
-  <li class="icon">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">?</a>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="dropFunction()">O aplikaci</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
   </li>
 </ul>
+
+<div class="loader" id="loader" style="visibility:hidden;"></div>
 
 <div id="container" style="padding-left:0px">
   
