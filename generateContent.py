@@ -4,11 +4,16 @@ Created on Tue Oct 11 20:16:38 2016
 
 @author: os
 """
+import Data
 
 class divTable:
     
     def GetTable(self):
-        content = " <div class='cell' onclick='UnitDetail(1)'> 	<table> <tr> 	<td>Jmeno:</td><td>XXXXXXX</td>	</tr><tr> <td>Třída:</td>			<td>YYYYY</td>		</tr> 	</table> </div> <div class='cell'> 	<table> <tr> 	<td>Jmeno:</td><td>XXXXXXX</td>	</tr><tr> <td>Třída:</td>			<td>YYYYY</td>		</tr> 	</table> </div>"
+        x=Data.DataStructure()
+        rs=x.GetAllUnits()
+        content=''
+        for row in rs:
+            content += " <div class='cell' onclick='UnitDetail(1)' style='float: left;display: inline;'> 	<table> <tr> 	<td>Jmeno:</td><td>{}</td>	</tr><tr> <td>Třída:</td>			<td>{}</td>		</tr> 	</table> </div>".format(row.nazev,row.cislo)
         return content
         
     def GetDetail(self):

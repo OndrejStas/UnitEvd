@@ -90,8 +90,8 @@ div.buttonMenu0
 <div class="rightPart">
 
 
-<div class="detailLabel" > <div  class="detailPopis" > nazev </div > <div  class="detailHodnota"  > HODNOTA </div > </div>
-<div class="detailLabel" > <div  class="detailPopis" > cislo </div > <div  class="detailHodnota"  > CISLO</div >  </div>
+<div class="detailLabel" > <div  class="detailPopis" > nazev </div > <div  class="detailHodnota"  > {{title}} </div > </div>
+<div class="detailLabel" > <div  class="detailPopis" > cislo </div > <div  class="detailHodnota"  >  {{content}}</div >  </div>
 <div class="detailLabel" > <div  class="detailPopis" > typ </div > <div  class="detailHodnota"  > TYP </div >  </div>
 <div class="detailLabel" > <div  class="detailPopis" > kod </div > <div  class="detailHodnota"  > KOD </div >  </div>
 
@@ -103,7 +103,7 @@ div.buttonMenu0
 <div class="Button" >  Odstranit jednotku  </div>
 </div>
 </div>
-<div class="leftPart">.........................
+<div class="leftPart">
 </div>
 </body>
 </html>

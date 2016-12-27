@@ -5,7 +5,7 @@ Created on Tue Oct 11 20:14:59 2016
 @author: os
 """
 
-from bottle import route, run, template,static_file, response 
+from bottle import route, run, template,static_file, response ,view
 from generateContent import divTable
 
 
@@ -44,7 +44,15 @@ def hello(name='World'):
  
 @route ('/detail/<inputt>')
 def detail(inputt, method='GET'):
-    filename = 'detail.html'
-    return static_file(filename,  root='' ) 
+    #filename = 'detail.html'
+    #return static_file(filename,  root='' ) 
+    print inputt
+    info = {'title': 'Welcome Home!',
+            'content': 'Hello World'
+            }
+    #return template('detail', content=inputt)
+    return template('detail.tpl', **info)
+    
+#run( server="flup" ,host='localhost', port=8080)
+run( host='localhost', port=8080)
 
-run(host='localhost', port=8080)
